@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clyon <clyon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 12:01:40 by marcela           #+#    #+#             */
-/*   Updated: 2022/11/18 16:20:37 by mrichard         ###   ########.fr       */
+/*   Updated: 2025/08/22 17:15:51 by clyon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/*music player = va_list args (spotify playlist analogy)*/
 int	ft_format(va_list args, const char format)
 {
 	if (format == 'c')
