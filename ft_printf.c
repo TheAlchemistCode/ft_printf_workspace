@@ -1,18 +1,31 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: clyon <clyon@student.42.fr>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 12:01:40 by marcela           #+#    #+#             */
-/*   Updated: 2025/08/22 17:15:51 by clyon            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
+
 
 #include "ft_printf.h"
 
-/*music player = va_list args (spotify playlist analogy)*/
+/* 
+ * Handles a single format specifier (like %c, %s, %d, etc.) and prints the
+ * corresponding argument from the variable argument list.
+ * 
+ * - va_list args: "Here’s my cursor. It exists, but it’s not pointing anywhere yet.”
+ * - va_start (args, str): "Now, I’m pointing at the first argument after str.”
+ * 
+ * - Give me whatever the cursor is pointing at, interpret it as type, 
+ * and then move forward to the next argument.”
+ * 
+ * va_end (args): "I’m done with the arguments. put the cursor away.”
+ * 
+ * format parameter is a format specifier character (like 'c', 's', 'd', etc.)
+ * 
+ * c = character (ascii)
+ * s = string
+ * p = pointer (address in memory)
+ * d = decimal
+ * u = unsigned decimal
+ * x = hexadecimal (lowercase)
+ * 
+*/ 
+
 int	ft_format(va_list args, const char format)
 {
 	if (format == 'c')

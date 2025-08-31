@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Q <Q@student.42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 22:09:41 by marcela           #+#    #+#             */
-/*   Updated: 2022/11/18 16:12:28 by mrichard         ###   ########.fr       */
+/*   Updated: 2025/08/29 17:26:03 by Q                ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,18 @@ int	ft_num_len(unsigned int num)
 	return (len);
 }
 
+/*
+ * ft_uitoa:
+ * Converts an unsigned int 'n' into a string representation (base 10).
+ * Returns a pointer to a malloc'd string containing the number as characters.
+ * Caller is responsible for freeing the allocated memory.
+ * 
+ *  this pointer, *num, is used to hold the string result (ascii)
+ *  len is the number of characters needed to print the string
+ *  in the loop,  %10 is to get the digit at the end (right side)
+ *  +48 converts to ascii,
+ *  n / 10 is to remove the last digit, len -- to move left in the string
+ */
 char	*ft_uitoa(unsigned int n)
 {
 	char	*num;
@@ -44,6 +56,12 @@ char	*ft_uitoa(unsigned int n)
 	return (num);
 }
 
+/*
+ * ft_print_unsigned:
+ * Prints an unsigned integer 'n' to standard output (fd = 1).
+ * Uses ft_uitoa to convert the number to a string, then prints it.
+ * Returns the number of characters written.
+ */
 int	ft_print_unsigned(unsigned int n)
 {
 	int		length;
@@ -60,3 +78,4 @@ int	ft_print_unsigned(unsigned int n)
 	}
 	return (length);
 }
+
